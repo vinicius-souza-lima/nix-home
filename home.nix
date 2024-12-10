@@ -79,4 +79,10 @@
   };
   programs.fzf.enable=true;
   programs.bash.enable=true;
+  programs.fish.enable=true;
+  programs.starship ={
+    enable=true;
+    enableFishIntegration = true;
+  };
+  programs.zoxide.enable=true;
 }
