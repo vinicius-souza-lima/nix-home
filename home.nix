@@ -25,6 +25,8 @@
     pkgs.rustup
     pkgs.ffmpeg
     pkgs.yt-dlp
+    pkgs.xdg-utils
+    pkgs.wsl-open
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -72,6 +74,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    BROWSER = "/home/vinicius/.nix-profile/bin/wsl-open";
   };
 
   # Let Home Manager install and manage itself.
