@@ -17,17 +17,29 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    pkgs.gcc
-    pkgs.uv
-    pkgs.rustup
-    pkgs.ffmpeg
-    pkgs.yt-dlp
-    pkgs.xdg-utils
-    pkgs.wsl-open
+    gcc
+    uv
+    rustup
+    ffmpeg
+    yt-dlp
+    xdg-utils
+    wsl-open
+    deno
+    pkg-config
+    dbus
+    openssl_3
+    glib
+    gtk3
+    libsoup
+    webkitgtk
+    appimagekit
+    librsvg
+    chromium
+    
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -76,6 +88,7 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
     BROWSER = "/home/vinicius/.nix-profile/bin/wsl-open";
+    PKG_CONFIG_PATH = "/home/vinicius/.nix-profile/bin/pkg-config";
   };
 
   # Let Home Manager install and manage itself.
